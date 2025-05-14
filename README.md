@@ -120,5 +120,4 @@ If everything is set up correctly, your app will initialize Firebase on startup.
 ## 🔗 Useful Links
 
 - [FlutterFire Documentation](https://firebase.flutter.dev/docs/overview)
-- [Firebase Console](https://console.firebase.google.com/)
 - [Flutter Documentation](https://docs.flutter.dev/)
