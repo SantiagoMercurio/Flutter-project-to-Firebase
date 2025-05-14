@@ -59,14 +59,13 @@ flutterfire configure
 - Select the platforms you want to configure (android, ios, etc.).
 - This will generate `lib/firebase_options.dart`.
 
-### 6. Initialize and Test Firebase in Your App
+### 6. Initialize Firebase in Your App
 
 In your `lib/main.dart`:
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -83,22 +82,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Firebase Test',
+      title: 'Flutter Firebase Demo',
       home: Scaffold(
-        appBar: AppBar(title: const Text('Firebase Test')),
-        body: Center(
-          child: FutureBuilder(
-            future: FirebaseFirestore.instance.collection('test').add({'timestamp': DateTime.now()}),
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.done) {
-                return const Text('Successfully wrote to Firestore!');
-              } else if (snapshot.hasError) {
-                return Text('Error: ${snapshot.error}');
-              }
-              return const CircularProgressIndicator();
-            },
-          ),
-        ),
+        appBar: AppBar(title: const Text('Firebase Connected!')),
+        body: const Center(child: Text('Hello Firebase!')),
       ),
     );
   }
