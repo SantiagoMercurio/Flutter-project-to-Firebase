@@ -46,10 +46,10 @@ In your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  firebase_core: ^2.27.0
+  firebase_core: ^2.27.1
   # Add additional packages as needed:
-  firebase_auth: ^4.17.4
-  cloud_firestore: ^4.14.0
+  firebase_auth: ^4.17.9
+  cloud_firestore: ^4.15.9
 ```
 
 Then run:
